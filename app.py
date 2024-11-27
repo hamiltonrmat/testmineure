@@ -11,8 +11,7 @@ st.title('Bienvenue !')
 df = pd.DataFrame(values, columns=feature_names)
 df
 plot = df['alcohol']
-st.write('Voici le grafique de la colonne alcohol: ')
-st.line_chart(plot)
 
-
-
+bot = st.checkbox("Afficher le grafique de la colonne alcohol: ")
+if bot:
+  st.line_chart(plot)
